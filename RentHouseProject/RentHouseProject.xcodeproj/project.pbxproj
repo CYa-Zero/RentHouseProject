@@ -41,6 +41,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		239D18811D401E5E00B5D42D /* login&register */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "login&register";
+			sourceTree = "<group>";
+		};
+		239D18821D401E8300B5D42D /* seller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = seller;
+			sourceTree = "<group>";
+		};
+		239D18831D401E8B00B5D42D /* buyer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = buyer;
+			sourceTree = "<group>";
+		};
 		861076A91D401BC200E391F6 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +81,9 @@
 		861076B41D401BC200E391F6 /* RentHouseProject */ = {
 			isa = PBXGroup;
 			children = (
+				239D18811D401E5E00B5D42D /* login&register */,
+				239D18831D401E8B00B5D42D /* buyer */,
+				239D18821D401E8300B5D42D /* seller */,
 				861076B81D401BC200E391F6 /* AppDelegate.h */,
 				861076B91D401BC200E391F6 /* AppDelegate.m */,
 				861076BB1D401BC200E391F6 /* ViewController.h */,
@@ -304,6 +328,7 @@
 				861076CE1D401BC200E391F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
