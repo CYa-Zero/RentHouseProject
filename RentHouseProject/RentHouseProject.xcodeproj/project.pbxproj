@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23D614131D4071DB00627307 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D614121D4071DB00627307 /* RegisterViewController.m */; };
 		861076B71D401BC200E391F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 861076B61D401BC200E391F6 /* main.m */; };
 		861076BA1D401BC200E391F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 861076B91D401BC200E391F6 /* AppDelegate.m */; };
 		861076BD1D401BC200E391F6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 861076BC1D401BC200E391F6 /* ViewController.m */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23D614111D4071DB00627307 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		23D614121D4071DB00627307 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		861076B21D401BC200E391F6 /* RentHouseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RentHouseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		861076B61D401BC200E391F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		861076B81D401BC200E391F6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -44,6 +47,10 @@
 		239D18811D401E5E00B5D42D /* login&register */ = {
 			isa = PBXGroup;
 			children = (
+				861076BB1D401BC200E391F6 /* ViewController.h */,
+				861076BC1D401BC200E391F6 /* ViewController.m */,
+				23D614111D4071DB00627307 /* RegisterViewController.h */,
+				23D614121D4071DB00627307 /* RegisterViewController.m */,
 			);
 			name = "login&register";
 			sourceTree = "<group>";
@@ -81,13 +88,11 @@
 		861076B41D401BC200E391F6 /* RentHouseProject */ = {
 			isa = PBXGroup;
 			children = (
+				861076B81D401BC200E391F6 /* AppDelegate.h */,
+				861076B91D401BC200E391F6 /* AppDelegate.m */,
 				239D18811D401E5E00B5D42D /* login&register */,
 				239D18831D401E8B00B5D42D /* buyer */,
 				239D18821D401E8300B5D42D /* seller */,
-				861076B81D401BC200E391F6 /* AppDelegate.h */,
-				861076B91D401BC200E391F6 /* AppDelegate.m */,
-				861076BB1D401BC200E391F6 /* ViewController.h */,
-				861076BC1D401BC200E391F6 /* ViewController.m */,
 				861076BE1D401BC200E391F6 /* Main.storyboard */,
 				861076C41D401BC200E391F6 /* Assets.xcassets */,
 				861076C61D401BC200E391F6 /* LaunchScreen.storyboard */,
@@ -176,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23D614131D4071DB00627307 /* RegisterViewController.m in Sources */,
 				861076BD1D401BC200E391F6 /* ViewController.m in Sources */,
 				861076C31D401BC200E391F6 /* RentHouseProject.xcdatamodeld in Sources */,
 				861076BA1D401BC200E391F6 /* AppDelegate.m in Sources */,

@@ -1,25 +1,317 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LoginPage" translatesAutoresizingMaskIntoConstraints="NO" id="bHs-ks-PrO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1l1-Oy-0Xr">
+                                <rect key="frame" x="96" y="258" width="231" height="30"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="0.82718633472732217" green="0.81169532032030089" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="HbS-Ah-T7R"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Czb-MG-tup">
+                                <rect key="frame" x="96" y="319" width="231" height="30"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="0.81346153846153846" green="0.81346153846153846" blue="0.81346153846153846" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="R9k-28-Llc"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBY-Gd-uwh" userLabel="seller">
+                                <rect key="frame" x="203" y="363" width="15" height="15"/>
+                                <state key="normal" image="uncheckBtn_white"/>
+                                <state key="selected" image="checkedBtn_white"/>
+                                <connections>
+                                    <action selector="sellerBtn_Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZVI-Fu-hxp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EfX-hf-gux" userLabel="buyer">
+                                <rect key="frame" x="299" y="363" width="15" height="15"/>
+                                <state key="normal" image="uncheckBtn_white"/>
+                                <state key="selected" image="checkedBtn_white"/>
+                                <connections>
+                                    <action selector="buyerBtn_Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ehe-pp-lke"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQW-5s-Akq" userLabel="signIn">
+                                <rect key="frame" x="46" y="410" width="276" height="42"/>
+                                <state key="normal" backgroundImage="signInBtn"/>
+                                <connections>
+                                    <action selector="signInBtn_Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XSB-8U-azi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dei-dF-etO" userLabel="register">
+                                <rect key="frame" x="46" y="570" width="281" height="42"/>
+                                <state key="normal" backgroundImage="register"/>
+                                <connections>
+                                    <action selector="registerBtn_Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="02G-bN-keO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBS-Ld-nDs" userLabel="remember">
+                                <rect key="frame" x="299" y="460" width="15" height="15"/>
+                                <state key="normal" image="uncheckBtn_white"/>
+                                <state key="selected" image="checkedBtn_white"/>
+                                <connections>
+                                    <action selector="rememberMeBtn_Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NpI-Pl-D98"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="buyerBtn" destination="EfX-hf-gux" id="6L7-lR-Bf4"/>
+                        <outlet property="emailText" destination="1l1-Oy-0Xr" id="BBX-Fc-uvP"/>
+                        <outlet property="passwordText" destination="Czb-MG-tup" id="Ei1-Hs-NfI"/>
+                        <outlet property="rememberMeBtn" destination="uBS-Ld-nDs" id="XrL-An-vBR"/>
+                        <outlet property="sellerBtn" destination="rBY-Gd-uwh" id="Obg-5Q-iFj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="206.5" y="367.5"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="itO-R1-PJ8">
+            <objects>
+                <viewController storyboardIdentifier="RegisterViewController" id="b6v-CR-ZIu" customClass="RegisterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="52g-WP-KF8"/>
+                        <viewControllerLayoutGuide type="bottom" id="yHj-hC-q1b"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7DP-00-PjN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="registerBackground" translatesAutoresizingMaskIntoConstraints="NO" id="1Qa-8j-xun">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Egx-zd-pCT">
+                                <rect key="frame" x="96" y="90" width="250" height="30"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="b6v-CR-ZIu" id="asT-lS-NKe"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vud-Df-EUg">
+                                <rect key="frame" x="96" y="137" width="250" height="30"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="b6v-CR-ZIu" id="qhV-0R-Fma"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tYg-IF-iWd">
+                                <rect key="frame" x="149" y="188" width="197" height="30"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="b6v-CR-ZIu" id="1pC-Z7-m1M"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J1S-rK-09b">
+                                <rect key="frame" x="96" y="236" width="250" height="30"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="b6v-CR-ZIu" id="wM9-Ib-P7y"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qCj-Ag-KQ2">
+                                <rect key="frame" x="96" y="286" width="250" height="30"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="b6v-CR-ZIu" id="Yrt-sJ-IwI"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rrM-Eo-BQq">
+                                <rect key="frame" x="116" y="384" width="230" height="30"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="b6v-CR-ZIu" id="opv-IN-lx9"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cLo-o4-HfP">
+                                <rect key="frame" x="116" y="433" width="230" height="30"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="b6v-CR-ZIu" id="qYf-cW-5sZ"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6F9-72-9Hq" userLabel="seller">
+                                <rect key="frame" x="166" y="485" width="15" height="15"/>
+                                <state key="normal" image="uncheckBtn_white"/>
+                                <state key="selected" image="checkedBtn_white"/>
+                                <connections>
+                                    <action selector="sellerBtn_Tapped:" destination="b6v-CR-ZIu" eventType="touchUpInside" id="pkK-vN-M3y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKd-dF-Ybj" userLabel="buyer">
+                                <rect key="frame" x="289" y="485" width="15" height="15"/>
+                                <state key="normal" image="uncheckBtn_white"/>
+                                <state key="selected" image="checkedBtn_white"/>
+                                <connections>
+                                    <action selector="buyerBtn_Tapped:" destination="b6v-CR-ZIu" eventType="touchUpInside" id="SAc-7Q-WBC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7EK-D4-ejy" userLabel="cancel">
+                                <rect key="frame" x="20" y="516" width="116" height="30"/>
+                                <state key="normal" backgroundImage="cancelBtn"/>
+                                <connections>
+                                    <action selector="cancelBtn_Tapped:" destination="b6v-CR-ZIu" eventType="touchUpInside" id="0e9-Sw-qXj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlb-Jg-Wry" userLabel="submit">
+                                <rect key="frame" x="230" y="516" width="116" height="30"/>
+                                <state key="normal" backgroundImage="submitBtn"/>
+                                <connections>
+                                    <action selector="submitBtn_Tapped:" destination="b6v-CR-ZIu" eventType="touchUpInside" id="ghq-GW-xlq"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8N6-WO-n0p" userLabel="subView">
+                                <rect key="frame" x="0.0" y="516" width="375" height="151"/>
+                                <subviews>
+                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="EgI-q3-bex">
+                                        <rect key="frame" x="0.0" y="42" width="375" height="109"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="490766917.477449">
+                                            <!--2016-07-21 04:08:37 +0000-->
+                                        </date>
+                                        <connections>
+                                            <action selector="datePicker_Action:" destination="b6v-CR-ZIu" eventType="valueChanged" id="yfF-OH-Ck3"/>
+                                        </connections>
+                                    </datePicker>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tgJ-na-S6q">
+                                        <rect key="frame" x="0.0" y="-2" width="375" height="44"/>
+                                        <items>
+                                            <barButtonItem title="Cancel" id="fwO-3i-w7O">
+                                                <connections>
+                                                    <action selector="pickerCancelBtn_Tapped:" destination="b6v-CR-ZIu" id="Mn5-U3-5eH"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem width="254" style="plain" systemItem="fixedSpace" id="gy8-aE-9iC"/>
+                                            <barButtonItem title="Done" id="gV3-Hk-Dsi">
+                                                <connections>
+                                                    <action selector="pickerDoneBtn_Tapped:" destination="b6v-CR-ZIu" id="6Dj-th-GaA"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </items>
+                                    </toolbar>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Fh-tk-RCZ">
+                                <rect key="frame" x="96" y="335" width="250" height="30"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="b6v-CR-ZIu" id="u5a-wy-JyU"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="address1Text" destination="rrM-Eo-BQq" id="mx5-1U-KSo"/>
+                        <outlet property="address2Text" destination="cLo-o4-HfP" id="YXx-zm-HjN"/>
+                        <outlet property="birthdayText" destination="4Fh-tk-RCZ" id="jHA-Fs-L2q"/>
+                        <outlet property="buyerBtn" destination="CKd-dF-Ybj" id="ENT-Un-ca7"/>
+                        <outlet property="confirmPasswordText" destination="tYg-IF-iWd" id="dme-ZT-mOw"/>
+                        <outlet property="datePickerView" destination="EgI-q3-bex" id="5ek-wz-ICx"/>
+                        <outlet property="emailText" destination="J1S-rK-09b" id="KBG-Ef-UW3"/>
+                        <outlet property="mobileText" destination="qCj-Ag-KQ2" id="MVk-Mn-qii"/>
+                        <outlet property="passwordText" destination="Vud-Df-EUg" id="8Zu-NC-mi1"/>
+                        <outlet property="sellerBtn" destination="6F9-72-9Hq" id="GKI-v5-wCD"/>
+                        <outlet property="subView" destination="8N6-WO-n0p" id="QYb-Gd-FOT"/>
+                        <outlet property="userNameText" destination="Egx-zd-pCT" id="eCJ-RS-VMA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ktF-Gq-efB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="616.5" y="367.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="v1A-3Q-1El">
+            <objects>
+                <viewController id="Gri-vt-uz6" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5RV-A3-SjT"/>
+                        <viewControllerLayoutGuide type="bottom" id="5hL-7q-z3d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lK9-Yz-tpg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cav-zr-AmR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1024.5" y="367.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LoginPage" width="750" height="1334"/>
+        <image name="cancelBtn" width="203" height="49"/>
+        <image name="checkedBtn_white" width="27" height="27"/>
+        <image name="register" width="286" height="51"/>
+        <image name="registerBackground" width="750" height="1334"/>
+        <image name="signInBtn" width="286" height="51"/>
+        <image name="submitBtn" width="203" height="49"/>
+        <image name="uncheckBtn_white" width="27" height="27"/>
+    </resources>
 </document>
