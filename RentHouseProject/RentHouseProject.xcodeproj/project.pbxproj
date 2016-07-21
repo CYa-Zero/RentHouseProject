@@ -112,12 +112,12 @@
 		861076B41D401BC200E391F6 /* RentHouseProject */ = {
 			isa = PBXGroup;
 			children = (
+				861076BE1D401BC200E391F6 /* Main.storyboard */,
 				861076B81D401BC200E391F6 /* AppDelegate.h */,
 				861076B91D401BC200E391F6 /* AppDelegate.m */,
 				239D18811D401E5E00B5D42D /* login&register */,
 				239D18831D401E8B00B5D42D /* buyer */,
 				239D18821D401E8300B5D42D /* seller */,
-				861076BE1D401BC200E391F6 /* Main.storyboard */,
 				861076C41D401BC200E391F6 /* Assets.xcassets */,
 				861076C61D401BC200E391F6 /* LaunchScreen.storyboard */,
 				861076C91D401BC200E391F6 /* Info.plist */,
