@@ -34,6 +34,24 @@
 @property (weak, nonatomic) IBOutlet UITextField *searchText;
 - (IBAction)search_Action:(id)sender;
 - (IBAction)typboth_Action:(id)sender;
+- (IBAction)costclear_Action:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *typBtn;
+@property (weak, nonatomic) IBOutlet UIButton *cateBtn;
+@property (weak, nonatomic) IBOutlet UIButton *locBtn;
+@property (weak, nonatomic) IBOutlet UIButton *costBtn;
+
+
+@property (strong, nonatomic) NSString *nameStr;
+@property (strong, nonatomic) NSString *typeStr;
+@property (strong, nonatomic) NSString *locationStr;
+@property (strong, nonatomic) NSString *cateidStr;
+@property (strong, nonatomic) NSArray *resultArray;
+@property (strong, nonatomic) NSArray *presentArray;
+@property (weak, nonatomic) IBOutlet UILabel *typLbl;
+@property (weak, nonatomic) IBOutlet UILabel *cateLbl;
+@property (weak, nonatomic) IBOutlet UILabel *locLbl;
+@property (weak, nonatomic) IBOutlet UILabel *costLbl;
+- (IBAction)locclear_Action:(id)sender;
 
 @end
 
@@ -41,7 +59,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    _typeStr =@"";
+    _cateidStr = @"";
+    _locationStr = @"";
+    _nameStr = @"";
+    [self getResultFromServer];
+    [self.Tbl_View reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,6 +77,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)getResultFromServer {
+    NSString *searchStr = [NSString stringWithFormat:@"http://www.rjtmobile.com/realestate/getproperty.php?psearch&pname=%@&pptype=%@&ploc=%@&pcatid=%@",_nameStr,_typeStr,_locationStr,_cateidStr];
+    NSLog(@"%@",searchStr);
+    NSURL *url = [NSURL URLWithString:searchStr];
+    [[[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        NSLog(@"Error Information: %@",error);
+        id json=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            _resultArray = [NSArray arrayWithArray:json];
+            _presentArray = _resultArray;
+            [_Tbl_View reloadData];
+        });
+        NSLog(@"%@",_resultArray);
+    }]resume];
+}
 /*
 #pragma mark - Navigation
 
@@ -60,45 +103,126 @@
 */
 
 - (IBAction)type_Action:(id)sender {
+    [_typSub_View setHidden:NO];
+    [_cateSub_View setHidden:YES];
+    [_locSub_View setHidden:YES];
+    [_costSub_View setHidden:YES];
 }
 
 - (IBAction)cate_Action:(id)sender {
+    [_typSub_View setHidden:YES];
+    [_cateSub_View setHidden:NO];
+    [_locSub_View setHidden:YES];
+    [_costSub_View setHidden:YES];
 }
 
 - (IBAction)loc_Action:(id)sender {
+    [_typSub_View setHidden:YES];
+    [_cateSub_View setHidden:YES];
+    [_locSub_View setHidden:NO];
+    [_costSub_View setHidden:YES];
 }
 
 - (IBAction)cost_Action:(id)sender {
+    [_typSub_View setHidden:YES];
+    [_cateSub_View setHidden:YES];
+    [_locSub_View setHidden:YES];
+    [_costSub_View setHidden:NO];
 }
 
 - (IBAction)typplot_Action:(id)sender {
+    _typLbl.text = @"plot";
+    _typeStr = @"plot";
+    [_typSub_View setHidden:YES];
+    [self getResultFromServer];
 }
 
 - (IBAction)typflat_Action:(id)sender {
+    _typLbl.text = @"flat";
+    _typeStr = @"flat";
+    [_typSub_View setHidden:YES];
+    [self getResultFromServer];
 }
 
 - (IBAction)typhouse_Action:(id)sender {
+    _typLbl.text = @"house";
+    _typeStr = @"house";
+    [_typSub_View setHidden:YES];
+    [self getResultFromServer];
 }
 
 - (IBAction)typoffice_Action:(id)sender {
+    _typLbl.text = @"office";
+    _typeStr = @"office";
+    [_typSub_View setHidden:YES];
+    [self getResultFromServer];
 }
 
 - (IBAction)typvilla_Action:(id)sender {
+    _typLbl.text = @"villa";
+    _typeStr = @"villa";
+    [_typSub_View setHidden:YES];
+    [self getResultFromServer];
 }
 - (IBAction)typall_Action:(id)sender {
+    _typLbl.text = @"";
+    _typeStr = @"";
+    [_typSub_View setHidden:YES];
+    [self getResultFromServer];
 }
 - (IBAction)catebuy_Action:(id)sender {
+    _cateLbl.text = @"Buy";
+    _cateidStr = @"2";
+    [_cateSub_View setHidden:YES];
+    [self getResultFromServer];
 }
 
 - (IBAction)caterent_Action:(id)sender {
+    _cateLbl.text = @"Rent";
+    _cateidStr = @"1";
+    [_cateSub_View setHidden:YES];
+    [self getResultFromServer];
 }
 - (IBAction)locconfirm_Action:(id)sender {
+    _locLbl.text = _locText.text;
+    _locationStr = _locText.text;
+    [_locSub_View setHidden:YES];
+    [self getResultFromServer];
+
 }
 - (IBAction)costconfirm_Action:(id)sender {
+    
 }
 - (IBAction)search_Action:(id)sender {
+    [_typSub_View setHidden:YES];
+    [_cateSub_View setHidden:YES];
+    [_locSub_View setHidden:YES];
+    [_costSub_View setHidden:YES];
+    _nameStr = _searchText.text;
+    [self getResultFromServer];
 }
 
 - (IBAction)typboth_Action:(id)sender {
+    _cateLbl.text = @"Both";
+    _cateidStr = @"";
+    [_typSub_View setHidden:YES];
+    [self getResultFromServer];
+}
+
+- (IBAction)costclear_Action:(id)sender {
+    [_costSub_View setHidden:YES];
+}
+
+#pragma -mark Table View Methods
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [_presentArray count];
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell*cell = [tableView dequeueReusableCellWithIdentifier:@"BasicCell"];
+    cell.textLabel.text = [[_presentArray objectAtIndex:indexPath.row] valueForKey:@"Property Name"];
+    return cell;
+}
+#pragma -mark Table View Methods end
+- (IBAction)locclear_Action:(id)sender {
 }
 @end

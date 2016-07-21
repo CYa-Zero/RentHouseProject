@@ -148,6 +148,7 @@
         [self animatedTextFieldMove:textField UP:YES];
     }
     if (textField == _birthdayText) {
+        [_birthdayText resignFirstResponder];
         [_subView setHidden:NO];
     }
 }// became first responder

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ngn-Ex-kw1">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -164,7 +164,7 @@
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="b6v-CR-ZIu" id="Yrt-sJ-IwI"/>
                                 </connections>
@@ -296,11 +296,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oL2-Cf-Hzr">
-                                <rect key="frame" x="102" y="28" width="170" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2wj-eV-LUB">
                                 <rect key="frame" x="274" y="28" width="30" height="30"/>
                                 <state key="normal" image="search.png"/>
@@ -309,7 +304,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1vx-JA-60x">
-                                <rect key="frame" x="0.0" y="241" width="375" height="426"/>
+                                <rect key="frame" x="0.0" y="222" width="375" height="445"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BasicCell" id="dql-Ot-DdS">
@@ -326,102 +321,121 @@
                                     <outlet property="delegate" destination="Ngn-Ex-kw1" id="vqC-5u-KPD"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxA-yA-OCf">
-                                <rect key="frame" x="20" y="94" width="50" height="50"/>
-                                <state key="normal" title="TYPE"/>
-                                <connections>
-                                    <action selector="type_Action:" destination="Ngn-Ex-kw1" eventType="touchUpInside" id="H3f-lF-2Xx"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnE-32-EuZ">
-                                <rect key="frame" x="93" y="94" width="78" height="50"/>
-                                <state key="normal" title="CATEGORY"/>
+                                <rect key="frame" x="20" y="109" width="120" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="CATEGORY" backgroundImage="bluebar.png">
+                                    <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="cate_Action:" destination="Ngn-Ex-kw1" eventType="touchUpInside" id="Aw3-lU-aPA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ax3-OZ-AGo">
-                                <rect key="frame" x="198" y="94" width="90" height="50"/>
-                                <state key="normal" title="LOCATION"/>
+                                <rect key="frame" x="20" y="147" width="120" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="LOCATION" backgroundImage="bluebar.png">
+                                    <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="loc_Action:" destination="Ngn-Ex-kw1" eventType="touchUpInside" id="ysY-IH-Xpy"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxA-yA-OCf">
+                                <rect key="frame" x="20" y="71" width="120" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="TYPE" backgroundImage="bluebar.png">
+                                    <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="type_Action:" destination="Ngn-Ex-kw1" eventType="touchUpInside" id="H3f-lF-2Xx"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8w-5K-3rO">
-                                <rect key="frame" x="305" y="94" width="50" height="50"/>
-                                <state key="normal" title="COST"/>
+                                <rect key="frame" x="20" y="184" width="120" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="COST" backgroundImage="bluebar.png">
+                                    <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="cost_Action:" destination="Ngn-Ex-kw1" eventType="touchUpInside" id="rKI-JY-Z76"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O1K-BJ-hax">
-                                <rect key="frame" x="0.0" y="140" width="100" height="240"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEq-2d-b7S">
+                                <rect key="frame" x="170" y="71" width="185" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Go-Td-Y6G">
+                                <rect key="frame" x="170" y="109" width="185" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUV-pN-m3M">
+                                <rect key="frame" x="170" y="147" width="185" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MjE-e6-krE">
+                                <rect key="frame" x="170" y="184" width="185" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FUe-x1-b8W">
+                                <rect key="frame" x="131" y="71" width="244" height="143"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyg-fi-uEt">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
-                                        <state key="normal" title="Plot"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="note_bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ZRX-9f-h6a">
+                                        <rect key="frame" x="0.0" y="0.0" width="244" height="143"/>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8fN-PC-oxS">
+                                        <rect key="frame" x="25" y="32" width="174" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C8u-Lg-nqn">
+                                        <rect key="frame" x="139" y="84" width="55" height="30"/>
+                                        <state key="normal" title="Clear"/>
                                         <connections>
-                                            <action selector="typplot_Action:" destination="Ngn-Ex-kw1" eventType="touchUpInside" id="52o-s5-qBG"/>
+                                            <action selector="locclear_Action:" destination="Ngn-Ex-kw1" eventType="touchUpInside" id="S2v-fG-U4d"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l27-LP-tsy">
-                                        <rect key="frame" x="8" y="114" width="92" height="30"/>
-                                        <state key="normal" title="Offices"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qn6-nT-dIM">
+                                        <rect key="frame" x="25" y="84" width="55" height="30"/>
+                                        <state key="normal" title="Confirm"/>
                                         <connections>
-                                            <action selector="typoffice_Action:" destination="Ngn-Ex-kw1" eventType="touchUpInside" id="49b-Og-XZU"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1D-E8-azq">
-                                        <rect key="frame" x="8" y="76" width="92" height="30"/>
-                                        <state key="normal" title="House"/>
-                                        <connections>
-                                            <action selector="typhouse_Action:" destination="Ngn-Ex-kw1" eventType="touchUpInside" id="X9t-zX-iVy"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bf7-3d-CAC">
-                                        <rect key="frame" x="8" y="152" width="92" height="30"/>
-                                        <state key="normal" title="Villa"/>
-                                        <connections>
-                                            <action selector="typvilla_Action:" destination="Ngn-Ex-kw1" eventType="touchUpInside" id="Th7-n6-wk1"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPG-73-OOX">
-                                        <rect key="frame" x="0.0" y="38" width="100" height="30"/>
-                                        <state key="normal" title="Flat"/>
-                                        <connections>
-                                            <action selector="typflat_Action:" destination="Ngn-Ex-kw1" eventType="touchUpInside" id="fJ3-LB-Qsq"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iv3-Vd-azY">
-                                        <rect key="frame" x="8" y="190" width="92" height="30"/>
-                                        <state key="normal" title="All"/>
-                                        <connections>
-                                            <action selector="typall_Action:" destination="Ngn-Ex-kw1" eventType="touchUpInside" id="O7U-Zp-IG9"/>
+                                            <action selector="locconfirm_Action:" destination="Ngn-Ex-kw1" eventType="touchUpInside" id="mW5-rT-7pL"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t2u-eu-BZX">
-                                <rect key="frame" x="108" y="140" width="63" height="116"/>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t2u-eu-BZX">
+                                <rect key="frame" x="131" y="71" width="244" height="143"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="note_bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rVR-it-bkg">
+                                        <rect key="frame" x="0.0" y="0.0" width="244" height="143"/>
+                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H8b-Yo-4r8">
-                                        <rect key="frame" x="0.0" y="3" width="60" height="30"/>
-                                        <state key="normal" title="Buy"/>
+                                        <rect key="frame" x="8" y="0.0" width="208" height="30"/>
+                                        <state key="normal" title="Buy" backgroundImage="bluebar.png"/>
                                         <connections>
                                             <action selector="catebuy_Action:" destination="Ngn-Ex-kw1" eventType="touchUpInside" id="V8D-4S-yxJ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbI-6Z-X78">
-                                        <rect key="frame" x="0.0" y="39" width="60" height="30"/>
-                                        <state key="normal" title="Rent"/>
+                                        <rect key="frame" x="8" y="38" width="208" height="30"/>
+                                        <state key="normal" title="Rent" backgroundImage="bluebar.png"/>
                                         <connections>
                                             <action selector="caterent_Action:" destination="Ngn-Ex-kw1" eventType="touchUpInside" id="hct-Su-91W"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Pu-kT-qnN">
-                                        <rect key="frame" x="0.0" y="78" width="60" height="30"/>
-                                        <state key="normal" title="Both"/>
+                                        <rect key="frame" x="8" y="76" width="208" height="30"/>
+                                        <state key="normal" title="Both" backgroundImage="bluebar.png"/>
                                         <connections>
                                             <action selector="typboth_Action:" destination="Ngn-Ex-kw1" eventType="touchUpInside" id="oSr-8g-Evq"/>
                                         </connections>
@@ -429,78 +443,136 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FUe-x1-b8W">
-                                <rect key="frame" x="198" y="140" width="99" height="80"/>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O1K-BJ-hax">
+                                <rect key="frame" x="131" y="71" width="244" height="143"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qn6-nT-dIM">
-                                        <rect key="frame" x="22" y="42" width="55" height="30"/>
-                                        <state key="normal" title="Confirm"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="note_bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="0oQ-VL-MRt">
+                                        <rect key="frame" x="0.0" y="0.0" width="244" height="143"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyg-fi-uEt">
+                                        <rect key="frame" x="8" y="0.0" width="208" height="18"/>
+                                        <state key="normal" title="Plot"/>
                                         <connections>
-                                            <action selector="locconfirm_Action:" destination="Ngn-Ex-kw1" eventType="touchUpInside" id="mW5-rT-7pL"/>
+                                            <action selector="typplot_Action:" destination="Ngn-Ex-kw1" eventType="touchUpInside" id="52o-s5-qBG"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8fN-PC-oxS">
-                                        <rect key="frame" x="0.0" y="4" width="97" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l27-LP-tsy">
+                                        <rect key="frame" x="8" y="78" width="208" height="18"/>
+                                        <state key="normal" title="Offices"/>
+                                        <connections>
+                                            <action selector="typoffice_Action:" destination="Ngn-Ex-kw1" eventType="touchUpInside" id="49b-Og-XZU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1D-E8-azq">
+                                        <rect key="frame" x="8" y="52" width="208" height="18"/>
+                                        <state key="normal" title="House"/>
+                                        <connections>
+                                            <action selector="typhouse_Action:" destination="Ngn-Ex-kw1" eventType="touchUpInside" id="X9t-zX-iVy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bf7-3d-CAC">
+                                        <rect key="frame" x="8" y="104" width="208" height="18"/>
+                                        <state key="normal" title="Villa"/>
+                                        <connections>
+                                            <action selector="typvilla_Action:" destination="Ngn-Ex-kw1" eventType="touchUpInside" id="Th7-n6-wk1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iv3-Vd-azY">
+                                        <rect key="frame" x="8" y="125" width="208" height="18"/>
+                                        <state key="normal" title="All"/>
+                                        <connections>
+                                            <action selector="typall_Action:" destination="Ngn-Ex-kw1" eventType="touchUpInside" id="O7U-Zp-IG9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPG-73-OOX">
+                                        <rect key="frame" x="8" y="31" width="208" height="18"/>
+                                        <state key="normal" title="Flat"/>
+                                        <connections>
+                                            <action selector="typflat_Action:" destination="Ngn-Ex-kw1" eventType="touchUpInside" id="fJ3-LB-Qsq"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A7k-aN-OUI">
-                                <rect key="frame" x="0.0" y="20" width="240" height="78"/>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A7k-aN-OUI">
+                                <rect key="frame" x="131" y="71" width="244" height="143"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="note_bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="are-QJ-1Le">
+                                        <rect key="frame" x="0.0" y="0.0" width="244" height="143"/>
+                                    </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bCd-7a-dXM">
-                                        <rect key="frame" x="8" y="3" width="74" height="30"/>
+                                        <rect key="frame" x="48" y="0.0" width="149" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J1b-z5-rSB">
-                                        <rect key="frame" x="166" y="3" width="74" height="30"/>
+                                        <rect key="frame" x="48" y="76" width="149" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Svi-FL-2Ws">
-                                        <rect key="frame" x="100" y="8" width="40" height="21"/>
+                                        <rect key="frame" x="102" y="38" width="40" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QPs-2X-JNx">
-                                        <rect key="frame" x="93" y="40" width="55" height="30"/>
+                                        <rect key="frame" x="48" y="114" width="55" height="25"/>
                                         <state key="normal" title="Confirm"/>
                                         <connections>
                                             <action selector="costconfirm_Action:" destination="Ngn-Ex-kw1" eventType="touchUpInside" id="MRf-BB-YdT"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnn-tm-gqe">
+                                        <rect key="frame" x="141" y="114" width="56" height="25"/>
+                                        <state key="normal" title="Clear"/>
+                                        <connections>
+                                            <action selector="costclear_Action:" destination="Ngn-Ex-kw1" eventType="touchUpInside" id="Quy-2f-Gk0"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oL2-Cf-Hzr">
+                                <rect key="frame" x="102" y="20" width="170" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="Tbl_View" destination="1vx-JA-60x" id="2Lt-F2-YJy"/>
+                        <outlet property="cateBtn" destination="vnE-32-EuZ" id="K7H-DS-1w9"/>
+                        <outlet property="cateLbl" destination="6Go-Td-Y6G" id="Ewd-9J-th1"/>
                         <outlet property="cateSub_View" destination="t2u-eu-BZX" id="IWa-9w-kMa"/>
+                        <outlet property="costBtn" destination="E8w-5K-3rO" id="hQj-85-nIg"/>
+                        <outlet property="costLbl" destination="MjE-e6-krE" id="DZ4-py-M3B"/>
                         <outlet property="costSub_View" destination="A7k-aN-OUI" id="Ct0-AH-BS9"/>
                         <outlet property="costmaxText" destination="J1b-z5-rSB" id="VRn-qe-bcW"/>
                         <outlet property="costminText" destination="bCd-7a-dXM" id="gVf-zN-dD8"/>
+                        <outlet property="locBtn" destination="Ax3-OZ-AGo" id="JxM-Z0-Mty"/>
+                        <outlet property="locLbl" destination="pUV-pN-m3M" id="mfr-de-myK"/>
                         <outlet property="locSub_View" destination="FUe-x1-b8W" id="edb-SC-WUB"/>
                         <outlet property="locText" destination="8fN-PC-oxS" id="Xbg-Dp-mzG"/>
                         <outlet property="searchText" destination="oL2-Cf-Hzr" id="PwH-2Z-cK2"/>
+                        <outlet property="typBtn" destination="fxA-yA-OCf" id="HKQ-lV-RDu"/>
+                        <outlet property="typLbl" destination="vEq-2d-b7S" id="ApQ-zH-TZh"/>
                         <outlet property="typSub_View" destination="O1K-BJ-hax" id="q64-sg-Mn8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XaH-IZ-Q7G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="206.5" y="1125.5"/>
+            <point key="canvasLocation" x="206.5" y="1138.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="LoginPage" width="750" height="1334"/>
+        <image name="bluebar.png" width="308" height="67"/>
         <image name="cancelBtn" width="203" height="49"/>
         <image name="checkedBtn_white" width="27" height="27"/>
+        <image name="note_bg.jpg" width="1105" height="1300"/>
         <image name="register" width="286" height="51"/>
         <image name="registerBackground" width="750" height="1334"/>
         <image name="search.png" width="32" height="32"/>
