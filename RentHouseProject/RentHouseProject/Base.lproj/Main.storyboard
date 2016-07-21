@@ -92,6 +92,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+<<<<<<< Updated upstream
                     <connections>
                         <outlet property="buyerBtn" destination="EfX-hf-gux" id="6L7-lR-Bf4"/>
                         <outlet property="emailText" destination="1l1-Oy-0Xr" id="BBX-Fc-uvP"/>
@@ -293,15 +294,37 @@
                         <viewControllerLayoutGuide type="bottom" id="5hL-7q-z3d"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="lK9-Yz-tpg">
+=======
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="107.5" y="269.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Qp2-eI-xBJ">
+            <objects>
+                <viewController id="aA1-0f-ERG" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wwd-Lo-2RX"/>
+                        <viewControllerLayoutGuide type="bottom" id="8IZ-9H-Vv4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zwb-fC-pmB">
+>>>>>>> Stashed changes
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
+<<<<<<< Updated upstream
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cav-zr-AmR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1024.5" y="367.5"/>
+=======
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8xj-S1-KeT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="489.5" y="1050.5"/>
+>>>>>>> Stashed changes
         </scene>
     </scenes>
     <resources>
