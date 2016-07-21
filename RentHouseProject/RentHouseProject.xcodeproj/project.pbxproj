@@ -7,11 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-<<<<<<< Updated upstream
 		23D614131D4071DB00627307 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D614121D4071DB00627307 /* RegisterViewController.m */; };
-=======
-		8603FF221D408B3F009A3139 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8603FF211D408B3F009A3139 /* MapKit.framework */; };
->>>>>>> Stashed changes
+		8603FF251D40A3B3009A3139 /* BuyerMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8603FF241D40A3B3009A3139 /* BuyerMainViewController.m */; };
+		8603FF291D40AAAA009A3139 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 8603FF281D40AAAA009A3139 /* search.png */; };
 		861076B71D401BC200E391F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 861076B61D401BC200E391F6 /* main.m */; };
 		861076BA1D401BC200E391F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 861076B91D401BC200E391F6 /* AppDelegate.m */; };
 		861076BD1D401BC200E391F6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 861076BC1D401BC200E391F6 /* ViewController.m */; };
@@ -22,12 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-<<<<<<< Updated upstream
 		23D614111D4071DB00627307 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		23D614121D4071DB00627307 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
-=======
-		8603FF211D408B3F009A3139 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
->>>>>>> Stashed changes
+		8603FF231D40A3B3009A3139 /* BuyerMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyerMainViewController.h; sourceTree = "<group>"; };
+		8603FF241D40A3B3009A3139 /* BuyerMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyerMainViewController.m; sourceTree = "<group>"; };
+		8603FF281D40AAAA009A3139 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
 		861076B21D401BC200E391F6 /* RentHouseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RentHouseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		861076B61D401BC200E391F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		861076B81D401BC200E391F6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -46,7 +43,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8603FF221D408B3F009A3139 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,14 +70,32 @@
 		239D18831D401E8B00B5D42D /* buyer */ = {
 			isa = PBXGroup;
 			children = (
+				8603FF271D40A6D2009A3139 /* MainView */,
+				8603FF261D40A6C6009A3139 /* icons */,
 			);
 			name = buyer;
+			sourceTree = "<group>";
+		};
+		8603FF261D40A6C6009A3139 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				8603FF281D40AAAA009A3139 /* search.png */,
+			);
+			name = icons;
+			sourceTree = "<group>";
+		};
+		8603FF271D40A6D2009A3139 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				8603FF231D40A3B3009A3139 /* BuyerMainViewController.h */,
+				8603FF241D40A3B3009A3139 /* BuyerMainViewController.m */,
+			);
+			name = MainView;
 			sourceTree = "<group>";
 		};
 		861076A91D401BC200E391F6 = {
 			isa = PBXGroup;
 			children = (
-				8603FF211D408B3F009A3139 /* MapKit.framework */,
 				861076B41D401BC200E391F6 /* RentHouseProject */,
 				861076B31D401BC200E391F6 /* Products */,
 			);
@@ -152,6 +166,7 @@
 				TargetAttributes = {
 					861076B11D401BC200E391F6 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 65BW3B3MTY;
 					};
 				};
 			};
@@ -181,6 +196,7 @@
 				861076C81D401BC200E391F6 /* LaunchScreen.storyboard in Resources */,
 				861076C51D401BC200E391F6 /* Assets.xcassets in Resources */,
 				861076C01D401BC200E391F6 /* Main.storyboard in Resources */,
+				8603FF291D40AAAA009A3139 /* search.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +212,7 @@
 				861076C31D401BC200E391F6 /* RentHouseProject.xcdatamodeld in Sources */,
 				861076BA1D401BC200E391F6 /* AppDelegate.m in Sources */,
 				861076B71D401BC200E391F6 /* main.m in Sources */,
+				8603FF251D40A3B3009A3139 /* BuyerMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,10 +324,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RentHouseProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "IOS-Dev.RentHouseProject";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -318,10 +338,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RentHouseProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "IOS-Dev.RentHouseProject";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
