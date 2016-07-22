@@ -211,6 +211,8 @@
     [_locSub_View setHidden:YES];
     [_costSub_View setHidden:YES];
     _nameStr = _searchText.text;
+    _costLbl.text = _costminText.text;
+    _costmaxLbl.text = _costmaxText.text;
     [self getResultFromServer];
 }
 
