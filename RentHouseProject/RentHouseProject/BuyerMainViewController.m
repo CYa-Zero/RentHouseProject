@@ -52,6 +52,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *locLbl;
 @property (weak, nonatomic) IBOutlet UILabel *costLbl;
 - (IBAction)locclear_Action:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *costmaxLbl;
 
 @end
 
@@ -72,6 +73,7 @@
     _cateLbl.text = @"all";
     _locLbl.text = @"all";
     _costLbl.text = @"all";
+    _costmaxLbl.text = @"all";
     [self getResultFromServer];
     [self.Tbl_View reloadData];
 }
@@ -195,7 +197,13 @@
 
 }
 - (IBAction)costconfirm_Action:(id)sender {
-    
+//    NSArray*prList = [NSExpression expressionForConstantValue:@"Property Cost"];
+    NSPredicate *predicateMin = [NSPredicate predicateWithFormat:@"%K >= %@",@"Property Cost",_costminText.text];
+    NSPredicate *predicateMax = [NSPredicate predicateWithFormat:@"%K <= %@",@"Property Cost",_costmaxText.text];
+    NSPredicate *predicate = [NSCompoundPredicate andPredicateWithSubpredicates:@[predicateMin,predicateMax]];
+    NSArray*sortArray = _resultArray;
+    _presentArray = [sortArray filteredArrayUsingPredicate:predicate];
+    [_Tbl_View reloadData];
 }
 - (IBAction)search_Action:(id)sender {
     [_typSub_View setHidden:YES];
@@ -209,7 +217,7 @@
 - (IBAction)typboth_Action:(id)sender {
     _cateLbl.text = @"Both";
     _cateidStr = @"";
-    [_typSub_View setHidden:YES];
+    [_cateSub_View setHidden:YES];
     [self getResultFromServer];
 }
 
@@ -230,4 +238,5 @@
 - (IBAction)locclear_Action:(id)sender {
     _locLbl.text = @"all";
 }
+
 @end
