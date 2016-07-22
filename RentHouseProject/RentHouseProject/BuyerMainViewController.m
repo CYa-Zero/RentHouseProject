@@ -68,6 +68,10 @@
     _cateidStr = @"";
     _locationStr = @"";
     _nameStr = @"";
+    _typLbl.text = @"all";
+    _cateLbl.text = @"all";
+    _locLbl.text = @"all";
+    _costLbl.text = @"all";
     [self getResultFromServer];
     [self.Tbl_View reloadData];
 }
@@ -165,7 +169,7 @@
     [self getResultFromServer];
 }
 - (IBAction)typall_Action:(id)sender {
-    _typLbl.text = @"";
+    _typLbl.text = @"all";
     _typeStr = @"";
     [_typSub_View setHidden:YES];
     [self getResultFromServer];
@@ -224,5 +228,6 @@
 }
 #pragma -mark Table View Methods end
 - (IBAction)locclear_Action:(id)sender {
+    _locLbl.text = @"all";
 }
 @end
