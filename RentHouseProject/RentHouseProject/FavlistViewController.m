@@ -36,7 +36,7 @@
 
 - (void)fetchCoreData{
     NSUserDefaults*defaults = [NSUserDefaults standardUserDefaults];
-    NSString*uid = [defaults valueForKey:@"uid"];
+    NSString*uid = [defaults valueForKey:@"kuserid"];
     AppDelegate*delegate=(AppDelegate*)[[UIApplication sharedApplication]delegate];
     NSManagedObjectContext*context=[delegate managedObjectContext];
     NSFetchRequest*fetchrequest=[[NSFetchRequest alloc] initWithEntityName:@"FAVLIST"];

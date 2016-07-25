@@ -54,7 +54,8 @@
                     
                     if ([_buyerBtn isSelected]) {
                         NSUserDefaults*defaults = [NSUserDefaults standardUserDefaults];
-                        [defaults setValue:[json valueForKey:@"User Id"] forKey:@"kuserid"];
+                        NSString *uid = [[json objectAtIndex:0] valueForKey:@"User Id"];
+                        [defaults setValue:uid forKey:@"kuserid"];
                         NSLog(@"%@",[json valueForKey:@"User Id"]);
                         [self showAlertwithText:@"Login Successfully!"];
                         
