@@ -20,6 +20,16 @@
 		867920C21D41EC940048BC1A /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 867920C11D41EC940048BC1A /* MapViewController.m */; };
 		86836B221D413DC1000A57EB /* bluebar.png in Resources */ = {isa = PBXBuildFile; fileRef = 86836B201D413DC1000A57EB /* bluebar.png */; };
 		86836B231D413DC1000A57EB /* selectedbluebar.png in Resources */ = {isa = PBXBuildFile; fileRef = 86836B211D413DC1000A57EB /* selectedbluebar.png */; };
+		86968D521D426FDE0082D818 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86968D511D426FDE0082D818 /* MapKit.framework */; };
+		86968D541D426FE80082D818 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86968D531D426FE80082D818 /* CoreLocation.framework */; };
+		86BAB3AB1D454DCC00EC2C55 /* MapDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BAB3AA1D454DCC00EC2C55 /* MapDetailViewController.m */; };
+		86BAB3AE1D4564BF00EC2C55 /* MyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BAB3AD1D4564BF00EC2C55 /* MyAnnotation.m */; };
+		86BAB3B11D456D9500EC2C55 /* CustomPinAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BAB3B01D456D9500EC2C55 /* CustomPinAnnotationView.m */; };
+		86BAB3B31D45739500EC2C55 /* sell.png in Resources */ = {isa = PBXBuildFile; fileRef = 86BAB3B21D45739500EC2C55 /* sell.png */; };
+		86BAB3B51D45739C00EC2C55 /* rent.png in Resources */ = {isa = PBXBuildFile; fileRef = 86BAB3B41D45739C00EC2C55 /* rent.png */; };
+		86BAB3B71D459A2400EC2C55 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 86BAB3B61D459A2400EC2C55 /* pin.png */; };
+		86BAB3BA1D45F78900EC2C55 /* FavlistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BAB3B91D45F78900EC2C55 /* FavlistViewController.m */; };
+		86BAB3BD1D45F92B00EC2C55 /* CoreDataTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BAB3BC1D45F92B00EC2C55 /* CoreDataTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +53,21 @@
 		867920C11D41EC940048BC1A /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		86836B201D413DC1000A57EB /* bluebar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluebar.png; sourceTree = "<group>"; };
 		86836B211D413DC1000A57EB /* selectedbluebar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectedbluebar.png; sourceTree = "<group>"; };
+		86968D511D426FDE0082D818 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		86968D531D426FE80082D818 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		86BAB3A91D454DCC00EC2C55 /* MapDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapDetailViewController.h; sourceTree = "<group>"; };
+		86BAB3AA1D454DCC00EC2C55 /* MapDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapDetailViewController.m; sourceTree = "<group>"; };
+		86BAB3AC1D4564BF00EC2C55 /* MyAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAnnotation.h; sourceTree = "<group>"; };
+		86BAB3AD1D4564BF00EC2C55 /* MyAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAnnotation.m; sourceTree = "<group>"; };
+		86BAB3AF1D456D9500EC2C55 /* CustomPinAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPinAnnotationView.h; sourceTree = "<group>"; };
+		86BAB3B01D456D9500EC2C55 /* CustomPinAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPinAnnotationView.m; sourceTree = "<group>"; };
+		86BAB3B21D45739500EC2C55 /* sell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sell.png; sourceTree = "<group>"; };
+		86BAB3B41D45739C00EC2C55 /* rent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rent.png; sourceTree = "<group>"; };
+		86BAB3B61D459A2400EC2C55 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
+		86BAB3B81D45F78900EC2C55 /* FavlistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavlistViewController.h; sourceTree = "<group>"; };
+		86BAB3B91D45F78900EC2C55 /* FavlistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavlistViewController.m; sourceTree = "<group>"; };
+		86BAB3BB1D45F92B00EC2C55 /* CoreDataTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewCell.h; sourceTree = "<group>"; };
+		86BAB3BC1D45F92B00EC2C55 /* CoreDataTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86968D541D426FE80082D818 /* CoreLocation.framework in Frameworks */,
+				86968D521D426FDE0082D818 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +104,7 @@
 		239D18831D401E8B00B5D42D /* buyer */ = {
 			isa = PBXGroup;
 			children = (
+				8681F32A1D42C6FE002A8858 /* MapView */,
 				8603FF271D40A6D2009A3139 /* MainView */,
 				8603FF261D40A6C6009A3139 /* icons */,
 			);
@@ -86,6 +114,9 @@
 		8603FF261D40A6C6009A3139 /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				86BAB3B61D459A2400EC2C55 /* pin.png */,
+				86BAB3B41D45739C00EC2C55 /* rent.png */,
+				86BAB3B21D45739500EC2C55 /* sell.png */,
 				8603FF281D40AAAA009A3139 /* search.png */,
 				86836B201D413DC1000A57EB /* bluebar.png */,
 				86836B211D413DC1000A57EB /* selectedbluebar.png */,
@@ -98,8 +129,6 @@
 			children = (
 				8603FF231D40A3B3009A3139 /* BuyerMainViewController.h */,
 				8603FF241D40A3B3009A3139 /* BuyerMainViewController.m */,
-				867920C01D41EC940048BC1A /* MapViewController.h */,
-				867920C11D41EC940048BC1A /* MapViewController.m */,
 			);
 			name = MainView;
 			sourceTree = "<group>";
@@ -107,6 +136,8 @@
 		861076A91D401BC200E391F6 = {
 			isa = PBXGroup;
 			children = (
+				86968D531D426FE80082D818 /* CoreLocation.framework */,
+				86968D511D426FDE0082D818 /* MapKit.framework */,
 				861076B41D401BC200E391F6 /* RentHouseProject */,
 				861076B31D401BC200E391F6 /* Products */,
 			);
@@ -144,6 +175,25 @@
 				861076B61D401BC200E391F6 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8681F32A1D42C6FE002A8858 /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				867920C01D41EC940048BC1A /* MapViewController.h */,
+				867920C11D41EC940048BC1A /* MapViewController.m */,
+				86BAB3AC1D4564BF00EC2C55 /* MyAnnotation.h */,
+				86BAB3AD1D4564BF00EC2C55 /* MyAnnotation.m */,
+				86BAB3AF1D456D9500EC2C55 /* CustomPinAnnotationView.h */,
+				86BAB3B01D456D9500EC2C55 /* CustomPinAnnotationView.m */,
+				86BAB3A91D454DCC00EC2C55 /* MapDetailViewController.h */,
+				86BAB3AA1D454DCC00EC2C55 /* MapDetailViewController.m */,
+				86BAB3B81D45F78900EC2C55 /* FavlistViewController.h */,
+				86BAB3B91D45F78900EC2C55 /* FavlistViewController.m */,
+				86BAB3BB1D45F92B00EC2C55 /* CoreDataTableViewCell.h */,
+				86BAB3BC1D45F92B00EC2C55 /* CoreDataTableViewCell.m */,
+			);
+			name = MapView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,8 +256,11 @@
 			files = (
 				861076C81D401BC200E391F6 /* LaunchScreen.storyboard in Resources */,
 				861076C51D401BC200E391F6 /* Assets.xcassets in Resources */,
+				86BAB3B31D45739500EC2C55 /* sell.png in Resources */,
 				86836B231D413DC1000A57EB /* selectedbluebar.png in Resources */,
+				86BAB3B51D45739C00EC2C55 /* rent.png in Resources */,
 				861076C01D401BC200E391F6 /* Main.storyboard in Resources */,
+				86BAB3B71D459A2400EC2C55 /* pin.png in Resources */,
 				86836B221D413DC1000A57EB /* bluebar.png in Resources */,
 				8603FF291D40AAAA009A3139 /* search.png in Resources */,
 			);
@@ -224,9 +277,14 @@
 				861076BD1D401BC200E391F6 /* ViewController.m in Sources */,
 				861076C31D401BC200E391F6 /* RentHouseProject.xcdatamodeld in Sources */,
 				861076BA1D401BC200E391F6 /* AppDelegate.m in Sources */,
+				86BAB3BD1D45F92B00EC2C55 /* CoreDataTableViewCell.m in Sources */,
+				86BAB3AB1D454DCC00EC2C55 /* MapDetailViewController.m in Sources */,
 				861076B71D401BC200E391F6 /* main.m in Sources */,
 				8603FF251D40A3B3009A3139 /* BuyerMainViewController.m in Sources */,
+				86BAB3BA1D45F78900EC2C55 /* FavlistViewController.m in Sources */,
 				867920C21D41EC940048BC1A /* MapViewController.m in Sources */,
+				86BAB3B11D456D9500EC2C55 /* CustomPinAnnotationView.m in Sources */,
+				86BAB3AE1D4564BF00EC2C55 /* MyAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

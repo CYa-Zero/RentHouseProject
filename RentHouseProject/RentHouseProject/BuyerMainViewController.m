@@ -7,6 +7,8 @@
 //
 
 #import "BuyerMainViewController.h"
+#import "MapViewController.h"
+#import "MapDetailViewController.h"
 
 @interface BuyerMainViewController ()
 - (IBAction)type_Action:(id)sender;
@@ -39,6 +41,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *cateBtn;
 @property (weak, nonatomic) IBOutlet UIButton *locBtn;
 @property (weak, nonatomic) IBOutlet UIButton *costBtn;
+- (IBAction)locate_Action:(id)sender;
 
 
 @property (strong, nonatomic) NSString *nameStr;
@@ -60,7 +63,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    [self.navigationController setNavigationBarHidden:YES];
     // Do any additional setup after loading the view.
 }
 
@@ -236,9 +239,20 @@
     cell.textLabel.text = [[_presentArray objectAtIndex:indexPath.row] valueForKey:@"Property Name"];
     return cell;
 }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    MapDetailViewController*controller = [self.storyboard instantiateViewControllerWithIdentifier:@"MapDetailViewController"];
+    [controller setDetailArray:_resultArray];
+    [controller setDetailindex:indexPath.row];
+    [self presentViewController:controller animated:YES completion:nil];
+}
 #pragma -mark Table View Methods end
 - (IBAction)locclear_Action:(id)sender {
     _locLbl.text = @"all";
 }
 
+- (IBAction)locate_Action:(id)sender {
+    MapViewController*controller = [self.storyboard instantiateViewControllerWithIdentifier:@"MapViewController"];
+    [controller setInformationArray:_presentArray];
+    [self presentViewController:controller animated:YES completion:nil];
+}
 @end

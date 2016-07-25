@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "RegisterViewController.h"
+#import "BuyerMainViewController.h"
+
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *emailText;
 @property (weak, nonatomic) IBOutlet UITextField *passwordText;
@@ -49,8 +51,14 @@
             NSLog(@"%@",json);
             dispatch_sync(dispatch_get_main_queue(), ^{
                 if ([json count]) {
-                    [self showAlertwithText:@"Login Successfully!"];
-                    // jump
+                    
+                    if ([_buyerBtn isSelected]) {
+                        NSUserDefaults*defaults = [NSUserDefaults standardUserDefaults];
+                        [defaults setValue:[json valueForKey:@"User Id"] forKey:@"kuserid"];
+                        NSLog(@"%@",[json valueForKey:@"User Id"]);
+                        [self showAlertwithText:@"Login Successfully!"];
+                        
+                    }
                 }else{
                     [self showAlertwithText:@"Login fail, Please try later"];
                 }
@@ -167,7 +175,10 @@
 
 -(void) showAlertwithText:(NSString *)message{
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Alert" message:message preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+    UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        BuyerMainViewController*controller = [self.storyboard instantiateViewControllerWithIdentifier:@"BuyerMainViewController"];
+        [self.navigationController pushViewController: controller animated:YES];
+    }];
     [alertController addAction:alertAction];
     [self presentViewController:alertController animated:YES completion:nil];
 }
