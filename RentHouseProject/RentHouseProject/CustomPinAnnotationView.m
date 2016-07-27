@@ -13,8 +13,8 @@
 - (instancetype)initWithAnnotation:(id<MKAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithAnnotation:annotation reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.label = [[UILabel alloc]initWithFrame:CGRectMake(0, -20, 50, 20)];
-        self.label.backgroundColor = [UIColor grayColor];
+        self.label = [[UILabel alloc]initWithFrame:CGRectMake(-9, -20, 50, 20)];
+        self.label.backgroundColor = [UIColor whiteColor];
         self.label.textColor = [UIColor blackColor];
         self.label.textAlignment = NSTextAlignmentCenter;
         self.label.font = [UIFont systemFontOfSize:10];

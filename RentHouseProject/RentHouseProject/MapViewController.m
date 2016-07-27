@@ -56,38 +56,20 @@
 }
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation{
-    userLocation.title  =@"Current Location";
+    MyAnnotation *point = [[MyAnnotation alloc] init];
+    point.coordinate = userLocation.coordinate;
+    point.name = @"Current Location";
+    [self.mapView addAnnotation:point];
     _mapView.centerCoordinate = userLocation.coordinate;
-    
-    //[_mapView setRegion:MKCoordinateRegionMake(userLocation.coordinate, MKCoordinateSpanMake(0.3, 0.3)) animated:YES];
-    //    如果在ViewDidLoad中调用  添加大头针的话会没有掉落效果  定位结束后再添加大头针才会有掉落效果
     [self loadData];
-    
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation{
     
-    /*
-     
-     * 大头针分两种
-     
-     * 1. MKPinAnnotationView：他是系统自带的大头针，继承于MKAnnotationView，形状跟棒棒糖类似，可以设置糖的颜色，和显示的时候是否有动画效果
-     
-     * 2. MKAnnotationView：可以用指定的图片作为大头针的样式，但显示的时候没有动画效果，如果没有给图片的话会什么都不显示
-     
-     * 3. mapview有个代理方法，当大头针显示在试图上时会调用，可以实现这个方法来自定义大头针的动画效果，我下面写有可以参考一下
-     
-     * 4. 在这里我为了自定义大头针的样式，使用的是MKAnnotationView
-     
-     */
-    
-    
-    //    判断是不是用户的大头针数据模型
-    if ([annotation isKindOfClass:[MKUserLocation class]]) {
+        if ([annotation isKindOfClass:[MKUserLocation class]]) {
         MKAnnotationView *annotationView = [[MKAnnotationView alloc]init];
         //annotationView.image = [UIImage imageNamed:@"acc"];
         
-        //        是否允许显示插入视图*********
         annotationView.canShowCallout = YES;
         
         return annotationView;
@@ -98,24 +80,9 @@
         annotationView = [[CustomPinAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:@"otherAnnotationView"];
     }
     MyAnnotation *myAnnotation = annotation;
-    switch ([myAnnotation.type intValue]) {
-        case 1:
-            annotationView.image = [UIImage imageNamed:@"pin"];
-            
-            break;
-        case 2:
-            annotationView.image = [UIImage imageNamed:@"pin"];
-           
-            break;
-        default:
-            break;
-    }
-    //UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-    //annotationView.rightCalloutAccessoryView = rightButton;
-    
+    annotationView.image = [UIImage imageNamed:@"pin"];
     annotationView.label.text = myAnnotation.name;
     annotationView.tag = myAnnotation.annoindex;
-    
     return annotationView;
     }
 

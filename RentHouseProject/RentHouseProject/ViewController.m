@@ -49,13 +49,16 @@
         if (!error) {
             id json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
             NSLog(@"%@",json);
-            dispatch_sync(dispatch_get_main_queue(), ^{
+            dispatch_async(dispatch_get_main_queue(), ^{
                 if ([json count]) {
                     
                     if ([_buyerBtn isSelected]) {
-                        NSUserDefaults*defaults = [NSUserDefaults standardUserDefaults];
+//                        NSUserDefaults*defaults = [NSUserDefaults standardUserDefaults];
                         NSString *uid = [[json objectAtIndex:0] valueForKey:@"User Id"];
-                        [defaults setValue:uid forKey:@"kuserid"];
+                        NSString *temp = [NSString stringWithFormat:@"%@",uid];
+//                        [defaults setValue:temp forKey:@"kuserid"];
+                        [[NSUserDefaults standardUserDefaults]setObject:temp forKey:@"kuserid"];
+                        NSLog(@"!!!!!!!!!!%@", [[NSUserDefaults standardUserDefaults]valueForKey:@"kuserid"]);
                         NSLog(@"%@",[json valueForKey:@"User Id"]);
                         [self showAlertwithText:@"Login Successfully!"];
                         

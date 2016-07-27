@@ -56,6 +56,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *costLbl;
 - (IBAction)locclear_Action:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *costmaxLbl;
+- (IBAction)back_Action:(id)sender;
 
 @end
 
@@ -73,10 +74,11 @@
     _locationStr = @"";
     _nameStr = @"";
     _typLbl.text = @"all";
-    _cateLbl.text = @"all";
+    _cateLbl.text = @"both";
     _locLbl.text = @"all";
-    _costLbl.text = @"all";
+    _costLbl.text = @"0";
     _costmaxLbl.text = @"all";
+    self.Tbl_View.backgroundColor = [UIColor clearColor];
     [self getResultFromServer];
     [self.Tbl_View reloadData];
 }
@@ -206,6 +208,7 @@
     NSPredicate *predicate = [NSCompoundPredicate andPredicateWithSubpredicates:@[predicateMin,predicateMax]];
     NSArray*sortArray = _resultArray;
     _presentArray = [sortArray filteredArrayUsingPredicate:predicate];
+    [_costSub_View setHidden:YES];
     [_Tbl_View reloadData];
 }
 - (IBAction)search_Action:(id)sender {
@@ -220,14 +223,16 @@
 }
 
 - (IBAction)typboth_Action:(id)sender {
-    _cateLbl.text = @"Both";
+    _cateLbl.text = @"both";
     _cateidStr = @"";
     [_cateSub_View setHidden:YES];
     [self getResultFromServer];
 }
 
 - (IBAction)costclear_Action:(id)sender {
+    _presentArray = _resultArray;
     [_costSub_View setHidden:YES];
+    [_Tbl_View reloadData];
 }
 
 #pragma -mark Table View Methods
@@ -237,6 +242,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell*cell = [tableView dequeueReusableCellWithIdentifier:@"BasicCell"];
     cell.textLabel.text = [[_presentArray objectAtIndex:indexPath.row] valueForKey:@"Property Name"];
+    cell.backgroundColor = [UIColor clearColor];
+    [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -247,6 +254,7 @@
 }
 #pragma -mark Table View Methods end
 - (IBAction)locclear_Action:(id)sender {
+    [_locSub_View setHidden:YES];
     _locLbl.text = @"all";
 }
 
@@ -254,5 +262,8 @@
     MapViewController*controller = [self.storyboard instantiateViewControllerWithIdentifier:@"MapViewController"];
     [controller setInformationArray:_presentArray];
     [self presentViewController:controller animated:YES completion:nil];
+}
+- (IBAction)back_Action:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 @end

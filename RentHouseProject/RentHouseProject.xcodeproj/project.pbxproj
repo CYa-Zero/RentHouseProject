@@ -20,6 +20,23 @@
 		867920C21D41EC940048BC1A /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 867920C11D41EC940048BC1A /* MapViewController.m */; };
 		86836B221D413DC1000A57EB /* bluebar.png in Resources */ = {isa = PBXBuildFile; fileRef = 86836B201D413DC1000A57EB /* bluebar.png */; };
 		86836B231D413DC1000A57EB /* selectedbluebar.png in Resources */ = {isa = PBXBuildFile; fileRef = 86836B211D413DC1000A57EB /* selectedbluebar.png */; };
+		868676C81D487A05002C1280 /* back_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 868676C51D487A05002C1280 /* back_arrow.png */; };
+		868676C91D487A05002C1280 /* map_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 868676C61D487A05002C1280 /* map_icon.png */; };
+		868676CA1D487A05002C1280 /* search_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 868676C71D487A05002C1280 /* search_icon.png */; };
+		868676CF1D48841C002C1280 /* bg_blue.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 868676CD1D48841C002C1280 /* bg_blue.jpg */; };
+		868676D01D48841C002C1280 /* rainbow_bg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 868676CE1D48841C002C1280 /* rainbow_bg.jpeg */; };
+		868676D21D48850D002C1280 /* bg_pure.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 868676D11D48850D002C1280 /* bg_pure.jpg */; };
+		868676D41D4893A5002C1280 /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 868676D31D4893A5002C1280 /* add.png */; };
+		868676D61D489466002C1280 /* proInforlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 868676D51D489466002C1280 /* proInforlogo.png */; };
+		868676D81D4894F3002C1280 /* maplogosel.png in Resources */ = {isa = PBXBuildFile; fileRef = 868676D71D4894F3002C1280 /* maplogosel.png */; };
+		868676DA1D489541002C1280 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 868676D91D489541002C1280 /* star.png */; };
+		868676DE1D4895D9002C1280 /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = 868676DD1D4895D9002C1280 /* list.png */; };
+		868676E01D489625002C1280 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 868676DF1D489625002C1280 /* share.png */; };
+		868676E21D4896A8002C1280 /* favlistlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 868676E11D4896A8002C1280 /* favlistlogo.png */; };
+		868676E61D489B80002C1280 /* bg_wood.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 868676E31D489B80002C1280 /* bg_wood.jpg */; };
+		868676E71D489B80002C1280 /* bgcloud.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 868676E41D489B80002C1280 /* bgcloud.jpeg */; };
+		868676E81D489B80002C1280 /* bgskyblue.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 868676E51D489B80002C1280 /* bgskyblue.jpg */; };
+		868676EB1D489F94002C1280 /* FavDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 868676EA1D489F94002C1280 /* FavDetailViewController.m */; };
 		86968D521D426FDE0082D818 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86968D511D426FDE0082D818 /* MapKit.framework */; };
 		86968D541D426FE80082D818 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86968D531D426FE80082D818 /* CoreLocation.framework */; };
 		86BAB3AB1D454DCC00EC2C55 /* MapDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BAB3AA1D454DCC00EC2C55 /* MapDetailViewController.m */; };
@@ -53,6 +70,24 @@
 		867920C11D41EC940048BC1A /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		86836B201D413DC1000A57EB /* bluebar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluebar.png; sourceTree = "<group>"; };
 		86836B211D413DC1000A57EB /* selectedbluebar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectedbluebar.png; sourceTree = "<group>"; };
+		868676C51D487A05002C1280 /* back_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_arrow.png; sourceTree = "<group>"; };
+		868676C61D487A05002C1280 /* map_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_icon.png; sourceTree = "<group>"; };
+		868676C71D487A05002C1280 /* search_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search_icon.png; sourceTree = "<group>"; };
+		868676CD1D48841C002C1280 /* bg_blue.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_blue.jpg; sourceTree = "<group>"; };
+		868676CE1D48841C002C1280 /* rainbow_bg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rainbow_bg.jpeg; sourceTree = "<group>"; };
+		868676D11D48850D002C1280 /* bg_pure.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_pure.jpg; sourceTree = "<group>"; };
+		868676D31D4893A5002C1280 /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
+		868676D51D489466002C1280 /* proInforlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = proInforlogo.png; sourceTree = "<group>"; };
+		868676D71D4894F3002C1280 /* maplogosel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maplogosel.png; sourceTree = "<group>"; };
+		868676D91D489541002C1280 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		868676DD1D4895D9002C1280 /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list.png; sourceTree = "<group>"; };
+		868676DF1D489625002C1280 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
+		868676E11D4896A8002C1280 /* favlistlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favlistlogo.png; sourceTree = "<group>"; };
+		868676E31D489B80002C1280 /* bg_wood.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_wood.jpg; sourceTree = "<group>"; };
+		868676E41D489B80002C1280 /* bgcloud.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bgcloud.jpeg; sourceTree = "<group>"; };
+		868676E51D489B80002C1280 /* bgskyblue.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bgskyblue.jpg; sourceTree = "<group>"; };
+		868676E91D489F94002C1280 /* FavDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavDetailViewController.h; sourceTree = "<group>"; };
+		868676EA1D489F94002C1280 /* FavDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavDetailViewController.m; sourceTree = "<group>"; };
 		86968D511D426FDE0082D818 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		86968D531D426FE80082D818 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		86BAB3A91D454DCC00EC2C55 /* MapDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapDetailViewController.h; sourceTree = "<group>"; };
@@ -104,8 +139,9 @@
 		239D18831D401E8B00B5D42D /* buyer */ = {
 			isa = PBXGroup;
 			children = (
-				8681F32A1D42C6FE002A8858 /* MapView */,
 				8603FF271D40A6D2009A3139 /* MainView */,
+				8681F32A1D42C6FE002A8858 /* MapView */,
+				868676EC1D489FA8002C1280 /* Favorite List */,
 				8603FF261D40A6C6009A3139 /* icons */,
 			);
 			name = buyer;
@@ -114,12 +150,28 @@
 		8603FF261D40A6C6009A3139 /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				868676E11D4896A8002C1280 /* favlistlogo.png */,
+				868676DF1D489625002C1280 /* share.png */,
+				868676DD1D4895D9002C1280 /* list.png */,
+				868676D91D489541002C1280 /* star.png */,
+				868676D71D4894F3002C1280 /* maplogosel.png */,
+				868676D51D489466002C1280 /* proInforlogo.png */,
+				868676D31D4893A5002C1280 /* add.png */,
+				868676D11D48850D002C1280 /* bg_pure.jpg */,
+				868676C51D487A05002C1280 /* back_arrow.png */,
+				868676C61D487A05002C1280 /* map_icon.png */,
+				868676C71D487A05002C1280 /* search_icon.png */,
 				86BAB3B61D459A2400EC2C55 /* pin.png */,
 				86BAB3B41D45739C00EC2C55 /* rent.png */,
 				86BAB3B21D45739500EC2C55 /* sell.png */,
 				8603FF281D40AAAA009A3139 /* search.png */,
 				86836B201D413DC1000A57EB /* bluebar.png */,
 				86836B211D413DC1000A57EB /* selectedbluebar.png */,
+				868676E31D489B80002C1280 /* bg_wood.jpg */,
+				868676E41D489B80002C1280 /* bgcloud.jpeg */,
+				868676E51D489B80002C1280 /* bgskyblue.jpg */,
+				868676CD1D48841C002C1280 /* bg_blue.jpg */,
+				868676CE1D48841C002C1280 /* rainbow_bg.jpeg */,
 			);
 			name = icons;
 			sourceTree = "<group>";
@@ -188,12 +240,21 @@
 				86BAB3B01D456D9500EC2C55 /* CustomPinAnnotationView.m */,
 				86BAB3A91D454DCC00EC2C55 /* MapDetailViewController.h */,
 				86BAB3AA1D454DCC00EC2C55 /* MapDetailViewController.m */,
+			);
+			name = MapView;
+			sourceTree = "<group>";
+		};
+		868676EC1D489FA8002C1280 /* Favorite List */ = {
+			isa = PBXGroup;
+			children = (
 				86BAB3B81D45F78900EC2C55 /* FavlistViewController.h */,
 				86BAB3B91D45F78900EC2C55 /* FavlistViewController.m */,
 				86BAB3BB1D45F92B00EC2C55 /* CoreDataTableViewCell.h */,
 				86BAB3BC1D45F92B00EC2C55 /* CoreDataTableViewCell.m */,
+				868676E91D489F94002C1280 /* FavDetailViewController.h */,
+				868676EA1D489F94002C1280 /* FavDetailViewController.m */,
 			);
-			name = MapView;
+			name = "Favorite List";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,13 +315,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				868676D81D4894F3002C1280 /* maplogosel.png in Resources */,
+				868676CA1D487A05002C1280 /* search_icon.png in Resources */,
 				861076C81D401BC200E391F6 /* LaunchScreen.storyboard in Resources */,
 				861076C51D401BC200E391F6 /* Assets.xcassets in Resources */,
+				868676D41D4893A5002C1280 /* add.png in Resources */,
+				868676C81D487A05002C1280 /* back_arrow.png in Resources */,
 				86BAB3B31D45739500EC2C55 /* sell.png in Resources */,
 				86836B231D413DC1000A57EB /* selectedbluebar.png in Resources */,
 				86BAB3B51D45739C00EC2C55 /* rent.png in Resources */,
+				868676C91D487A05002C1280 /* map_icon.png in Resources */,
+				868676E61D489B80002C1280 /* bg_wood.jpg in Resources */,
+				868676E01D489625002C1280 /* share.png in Resources */,
+				868676E81D489B80002C1280 /* bgskyblue.jpg in Resources */,
 				861076C01D401BC200E391F6 /* Main.storyboard in Resources */,
+				868676D01D48841C002C1280 /* rainbow_bg.jpeg in Resources */,
+				868676DA1D489541002C1280 /* star.png in Resources */,
+				868676E21D4896A8002C1280 /* favlistlogo.png in Resources */,
+				868676E71D489B80002C1280 /* bgcloud.jpeg in Resources */,
+				868676D61D489466002C1280 /* proInforlogo.png in Resources */,
 				86BAB3B71D459A2400EC2C55 /* pin.png in Resources */,
+				868676DE1D4895D9002C1280 /* list.png in Resources */,
+				868676D21D48850D002C1280 /* bg_pure.jpg in Resources */,
+				868676CF1D48841C002C1280 /* bg_blue.jpg in Resources */,
 				86836B221D413DC1000A57EB /* bluebar.png in Resources */,
 				8603FF291D40AAAA009A3139 /* search.png in Resources */,
 			);
@@ -275,6 +352,7 @@
 			files = (
 				23D614131D4071DB00627307 /* RegisterViewController.m in Sources */,
 				861076BD1D401BC200E391F6 /* ViewController.m in Sources */,
+				868676EB1D489F94002C1280 /* FavDetailViewController.m in Sources */,
 				861076C31D401BC200E391F6 /* RentHouseProject.xcdatamodeld in Sources */,
 				861076BA1D401BC200E391F6 /* AppDelegate.m in Sources */,
 				86BAB3BD1D45F92B00EC2C55 /* CoreDataTableViewCell.m in Sources */,

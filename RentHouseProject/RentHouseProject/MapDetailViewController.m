@@ -8,6 +8,7 @@
 
 #import "MapDetailViewController.h"
 #import "AppDelegate.h"
+#import "FavlistViewController.h"
 
 @interface MapDetailViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *proname;
@@ -21,6 +22,7 @@
 - (IBAction)back_Action:(id)sender;
 - (IBAction)add_Action:(id)sender;
 - (IBAction)share_Action:(id)sender;
+- (IBAction)fav_Action:(id)sender;
 
 @end
 
@@ -133,5 +135,10 @@
 
 - (IBAction)share_Action:(id)sender {
     [self shareContent];
+}
+
+- (IBAction)fav_Action:(id)sender {
+    FavlistViewController*controller = [self.storyboard instantiateViewControllerWithIdentifier:@"FavlistViewController"];
+    [self presentViewController:controller animated:YES completion:nil];
 }
 @end
